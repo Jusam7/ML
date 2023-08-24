@@ -3,23 +3,6 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('train.csv')
 
-#def dia():
-#    muzh = df[df['sex']== 2 ]['result'].mean() * 100
-#    zhen = df[df['sex']== 1]['result'].mean() * 100
-#    s = pd.Series(data = [muzh, zhen], index = ['мужчины', "женщины"])
-#    s.plot(kind = 'barh', figsize = (8, 5), grid = True,)
-#    plt.show()
-
-#    unik = df[df['occupation_type']== 'university' ]['result'].mean() * 100
-#    work = df[df['occupation_type']== 'work' ]['result'].mean() * 100
-#    s = pd.Series(data = [unik, work], index = ['университет', "работа"])
-#    s.plot(kind = 'barh', figsize = (8, 5), grid = True,)
-#    plt.show()
-
-#temp = df.pivot_table(columns = 'occupation_type',
-#index = 'sex', values = 'result', aggfunc = 'mean')
-#print(temp)
-
 df.drop(['id', 'bdate', 'has_photo', 'has_mobile', 'followers_count', 'graduation',
 'relation', 'life_main', 'people_main', 'city', 'last_seen', 'occupation_name', 'career_start',
 'career_end'], axis=1, inplace=True)
